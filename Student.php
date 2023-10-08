@@ -1,3 +1,5 @@
+
+
 <?php
 
 class Student 
@@ -6,7 +8,9 @@ class Student
     public $vorname;
     public $nachname;
     public $martnr;
+    private $grades ;
 
+    public $durchschnitt;
    
 
 
@@ -34,7 +38,24 @@ class Student
         $this->martnr = $martnr;
     }
 
+    
+    public function noten($grades, $fach)
+    {
+        if ($fach == "Englisch")
+        {
+            $this->noten = $grades;
+        }
+        if ($fach == "Arabic")
+        {
+            $this->note = $grades;
+        }
+    }
+    private function durchschnitt($id, $grades, $durchschnitt)
+    {
+        //addiere alle noten($noten) eines Studenten($id) zusammen und 'teile sie durch anzahl der fächer = $durchschnitt'
+    }
 }
+
 
 
 
